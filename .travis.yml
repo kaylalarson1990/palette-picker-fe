@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-  - node
+- node
+deploy:
+  provider: heroku
+  api_key: d8c00736-157b-47b4-8dd9-370166683cdb
+  app: palette-picker-fe
+  on:
+    repo: kaylalarson1990/palette-picker-fe
+    branch: travis-ci
