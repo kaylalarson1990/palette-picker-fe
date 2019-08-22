@@ -3,7 +3,8 @@ node_js:
 - node
 deploy:
   provider: heroku
-  api_key: d8c00736-157b-47b4-8dd9-370166683cdb
+  api_key:
+    secure: V65ArJBwPYbPKEV3WkLVycADPSEJ4YBROs5Iq+kMtEekLjVmPAGJAGKoYDMxh8sLQ9gBAR+qE2CpAuyyWrP/YfLWaqn0fW9+wYZKn+h51lrKjbtntNoxkGJMLZ8a8P7hi2YX+2bGJKIv1l5ZW1r7dG5Kso5r3TmrS7mjdq9mb5D0B4IIEhDDcTgh11N5ReiJGcZEFpLvD00QdZNlNG3H9oOzjwfVoPteePj0Mcz/2WmrD5gd8gy49HEmP0jZQy/NbLfKl8GLFJo9JStfalkJha4BmB1W21uOqTE9EFJ0iWoKbrRb2fPZ/vhtXoceUUqWXHjVErxQDi0J14rmaQxP6cSEY/l+qSJaTaVhWH/AIRejFVD4Y0Sf8sk3Xql4KQbdPj2IOrG1vM11AiGGsWHzjtkXcKvjgh8W4N9C44L4cgJnJ45BvwH3c7RuE15s556dLxyhnOU3ZR0DwXY7Hg6yY6JohVCFY6RFe+8b9GmdaCChkDwtPg6Q+mXBybaKPCQE6LzRDLZICFM9X2s/qlGarqSONfs2sK/Jh+294dxmCFsQ0gkQTayi8wtkacTpr+nRLU+/Ig5ndNzuYKA9fpUv8ZP1QkDRHK4FUoXZcmB5OJos/I+c8vQ86ughfNF/c+c/LchHehBo/x+PyyiunqPZCGLJjp/rsT0I1TDXJk5NLKk=
   app: palette-picker-fe
   on:
     repo: kaylalarson1990/palette-picker-fe
