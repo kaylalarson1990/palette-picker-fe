@@ -1,17 +1,3 @@
 language: node_js
 node_js:
   - node
-cache:
-directories:
-  - node_modules
-script:
-  - npm test
-  - npm run build
-deploy:
-  provider: heroku
-  skip_cleanup: true
-  api_key: d8c00736-157b-47b4-8dd9-370166683cdb
-  app: palette-picker-fe
-  on:
-    repo: kaylalarson1990/palette-picker-fe
-    branch: travis-ci
