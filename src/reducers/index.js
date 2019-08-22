@@ -6,3 +6,5 @@ const rootReducer = combineReducers({
   projects: projectsReducer,
   palettes: palettesReducer
 })
+
+export default rootReducer;
