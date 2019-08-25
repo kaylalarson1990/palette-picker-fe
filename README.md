@@ -20,6 +20,12 @@
 - agreeing to a commit message template
 - exploring git rebase and squashing
 
+### Technologies
+
+- React
+- Redux
+- Jest/Enzyme
+
 
 ## Available Scripts
 
