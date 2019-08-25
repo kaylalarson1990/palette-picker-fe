@@ -16,6 +16,7 @@ class App extends Component {
       .then(data => this.setState({ projects: data }))
       .catch(error => Error("Error fetching projects"));
   }
+  
   render() {
     return (
       <div className="App">

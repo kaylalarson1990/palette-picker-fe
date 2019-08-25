@@ -37,8 +37,6 @@ class Generator extends Component {
         }
       })
     
-    console.log(colorsArray)
-    console.log(this.state.colorOne)
     return (
       <main>
         <h1>Palette Picker</h1>
