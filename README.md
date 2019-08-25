@@ -1,4 +1,4 @@
-[Heroku Deployed App](https://palette-picker-fe.herokuapp.com/)
+[Heroku Deployed Frontend](https://palette-picker-fe.herokuapp.com/)
 
 ## Learning Goals
 ### The primary learning goals for this project are:
