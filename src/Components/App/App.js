@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import Generator from "../Generator/Generator";
 import "./App.css";
+import { fetchAllProjects, fetchAllPalettes } from "../../apiCalls";
 
 class App extends Component {
   constructor() {
-    super() 
-      this.state = {
-        projects: []
-      }
+    super();
+    this.state = {
+      projects: [],
+      palettes: []
+    };
   }
 
   componentDidMount() {
-    return fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/projects')
-      .then(res => res.json())
-      .then(data => this.setState({ projects: data }))
-      .catch(error => Error("Error fetching projects"));
+    fetchAllProjects().then(data => this.setState({ projects: data }));
+    fetchAllPalettes().then(data => this.setState({ palettes: data }));
   }
-  
+
   render() {
     return (
       <div className="App">
