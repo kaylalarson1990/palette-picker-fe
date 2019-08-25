@@ -1,4 +1,8 @@
-[Heroku Deployed Frontend](https://palette-picker-fe.herokuapp.com/)
+By: [DeMarcus Kirby](https://github.com/KirbyDD) and [Kayla Larson](https://github.com/kaylalarson1990)
+
+# Description
+
+Palette Picker was a two week long paired project. On the front end, we used React and Redux to display our palettes. [Heroku Deployed Frontend](https://palette-picker-fe.herokuapp.com/)
 
 ## Learning Goals
 ### The primary learning goals for this project are:
