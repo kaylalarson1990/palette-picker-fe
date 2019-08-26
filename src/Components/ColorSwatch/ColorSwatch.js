@@ -1,53 +1,54 @@
-import React, { Component } from "react";
-import "./ColorSwatch.css";
-import NewPaletteForm from '../NewPaletteForm/NewPaletteForm'
+// import React from "react";
+// import "./ColorSwatch.css";
+// import NewPaletteForm from "../NewPaletteForm/NewPaletteForm";
 
+// const ColorSwatch = props => {
+//   const colorSwatch = props.data;
+//   // constructor(props) {
+//   //   super(props);
+//   //   this.state = {
+//   //     locked: false,
+//   //     hex: ""
+//   //   };
+//   // }
 
-class ColorSwatch extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     locked: false,
-  //     hex: ""
-  //   };
-  // }
+//   // checkIfLocked = () => {
+//   //   if (this.state.locked) {
+//   //     return require("../../images/locked.svg");
+//   //   } else {
+//   //     return require("../../images/unlocked.svg");
+//   //   }
+//   // };
 
-  // checkIfLocked = () => {
-  //   if (this.state.locked) {
-  //     return require("../../images/locked.svg");
-  //   } else {
-  //     return require("../../images/unlocked.svg");
-  //   }
-  // };
+//   // lockColor = color => {
+//   //   if (this.state.locked) {
+//   //     this.setState({
+//   //       locked: false
+//   //       // hex: ""
+//   //     });
+//   //   } else {
+//   //     this.setState({
+//   //       locked: true
+//   //       // hex: color
+//   //     });
+//   //   }
+//   // };
 
-  // lockColor = color => {
-  //   if (this.state.locked) {
-  //     this.setState({
-  //       locked: false
-  //       // hex: ""
-  //     });
-  //   } else {
-  //     this.setState({
-  //       locked: true
-  //       // hex: color
-  //     });
-  //   }
-  // };
+//   // render() {
+//   //   let lock = this.checkIfLocked();
+//   // let hexcode = this.generateHexCode();
+//   return (
+//     <div className="palette-holder" id={`colorSwatch${colorSwatch.id}`}>
+//       <h5>{colorSwatch.palette_name}</h5>
+//       <div className="saved-palettes">
+//         <div
+//           id="color1"
+//           className="saved-color color-container"
+//           style={{ backgroundColor: colorSwatch.color1 }}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
 
-  render() {
-    let lock = this.checkIfLocked();
-    // let hexcode = this.generateHexCode();
-    return (
-      <section>
-        <img
-          className="saved-color"
-          src={lock}
-          onClick={e => this.lockColor()}
-        />
-        <p>{this.props.hex}</p>
-      </section>
-    );
-  }
-}
-
-export default ColorSwatch;
+// export default ColorSwatch;

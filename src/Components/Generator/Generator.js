@@ -52,9 +52,6 @@ class Generator extends Component {
     });
     this.setState({ colors: newColors });
   };
-  // generateHexCode = () => {
-  //     return '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
-  // };
 
   render() {
     const { colors } = this.state;
