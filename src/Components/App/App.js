@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Generator from "../Generator/Generator";
+import ProjectContainer from "../ProjectContainer/ProjectContainer"
 import "./App.css";
 import { fetchAllProjects, fetchAllPalettes } from "../../apiCalls";
 
@@ -21,9 +22,15 @@ class App extends Component {
     return (
       <div className="App">
         <Generator />
+        <ProjectContainer />
       </div>
     );
   }
 }
+
+export const mapDispatchToProps = dispatch => ({
+  fetchAllProjects: () => dispatch(fetchAllProjects()),
+  fetchAllPalettes: () => dispatch(fetchAllPalettes())
+});
 
 export default App;
