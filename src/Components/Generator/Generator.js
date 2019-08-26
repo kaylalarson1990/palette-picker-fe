@@ -15,8 +15,8 @@ class Generator extends Component {
     this.generateHexColors();
   }
 
-  checkIfLocked = () => {
-    if (this.state.isLocked[0]) {
+  checkIfLocked = (index) => {
+    if (this.state.isLocked[index]) {
       return require("../../images/locked.svg");
     } else {
       return require("../../images/unlocked.svg");
@@ -46,7 +46,11 @@ class Generator extends Component {
 
   render() {
     const { colors } = this.state;
-    let changeLock = this.checkIfLocked();
+    let lockOne = this.checkIfLocked(0);
+    let lockTwo = this.checkIfLocked(1);
+    let lockThree = this.checkIfLocked(2);
+    let lockFour = this.checkIfLocked(3);
+    let lockFive = this.checkIfLocked(4);
 
     return (
       <div>
@@ -58,7 +62,7 @@ class Generator extends Component {
             style={{ backgroundColor: colors[0] }}
           >
             <img
-              src={changeLock}
+              src={lockOne}
               id="1"
               class="color-lock"
               value="Lock Color"
@@ -72,7 +76,7 @@ class Generator extends Component {
             style={{ backgroundColor: colors[1] }}
           >
             <img
-              src={changeLock}
+              src={lockTwo}
               id="2"
               class="color-lock"
               value="Lock Color"
@@ -86,7 +90,7 @@ class Generator extends Component {
             style={{ backgroundColor: colors[2] }}
           >
             <img
-              src={changeLock}
+              src={lockThree}
               id="3"
               class="color-lock"
               value="Lock Color"
@@ -100,7 +104,7 @@ class Generator extends Component {
             style={{ backgroundColor: colors[3] }}
           >
             <img
-              src={changeLock}
+              src={lockFour}
               id="4"
               class="color-lock"
               value="Lock Color"
@@ -114,7 +118,7 @@ class Generator extends Component {
             style={{ backgroundColor: colors[4] }}
           >
             <img
-              src={changeLock}
+              src={lockFive}
               id="5"
               class="color-lock"
               value="Lock Color"
