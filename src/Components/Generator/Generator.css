@@ -1,0 +1,24 @@
+.palette-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.color-container {
+  align-items: center;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.color-lock {
+  background-image: url("../../images/unlocked.svg");
+  padding: 20px;
+}
+
+/* .sa-locksaved {
+  background-image: url("../../images/locked.svg");
+  padding: 20px;
+} */
