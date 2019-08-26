@@ -76,7 +76,7 @@ class Generator extends Component {
             >
               <i
                 id="1"
-                class={`fas color-lock1 fa-lock${this.determineIfColorIsLocked(0)}`}
+                class={`lock${this.determineIfColorIsLocked(0)}`}
               />
             </button>
             <p id="color1-name" class="color-hex">
@@ -96,7 +96,7 @@ class Generator extends Component {
             >
               <i
                 id="2"
-                class={`fas color-lock2 fa-lock${this.determineIfColorIsLocked(1)}`}
+                class={`lock${this.determineIfColorIsLocked(1)}`}
               />
             </button>
             <p id="color2-name" class="color-hex">
@@ -116,7 +116,7 @@ class Generator extends Component {
             >
               <i
                 id="3"
-                class={`fas color-lock3 fa-lock${this.determineIfColorIsLocked(2)}`}
+                class={`lock${this.determineIfColorIsLocked(2)}`}
               />
             </button>
             <p id="color3-name" class="color-hex">
@@ -136,7 +136,7 @@ class Generator extends Component {
             >
               <i
                 id="4"
-                class={`fas color-lock4 fa-lock${this.determineIfColorIsLocked(3)}`}
+                class={`lock${this.determineIfColorIsLocked(3)}`}
               />
             </button>
             <p id="color4-name" class="color-hex">
@@ -156,7 +156,7 @@ class Generator extends Component {
             >
               <i
                 id="5"
-                class={`fas color-lock5 fa-lock${this.determineIfColorIsLocked(4)}`}
+                class={`lock${this.determineIfColorIsLocked(4)}`}
               />
             </button>
             <p id="color5-name" class="color-hex">
