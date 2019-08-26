@@ -1,3 +1,13 @@
+h1 {
+  font-weight: 300;
+  font-size: 50px;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+}
+
 .palette-container {
   display: flex;
   justify-content: space-around;
@@ -14,8 +24,17 @@
 }
 
 .color-lock {
-  background-image: url("../../images/unlocked.svg");
+  /* background-image: url("../../images/unlocked.svg"); */
   padding: 20px;
+}
+
+.generate-palette-btn {
+  padding: 10px;
+  background-color: white;
+  border: 1px black solid;
+  color: black;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 /* .sa-locksaved {
