@@ -21,6 +21,7 @@ class NewPaletteForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.setState({ form: false})
   }
 
   render() {
