@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ColorSwatch from "../ColorSwatch/ColorSwatch";
 import randomHexColor from "random-hex-color";
 import "./Generator.css";
 
@@ -16,13 +15,13 @@ class Generator extends Component {
     this.generateHexColors();
   }
 
-  // checkIfLocked = () => {
-  //   if (this.state.isLocked) {
-  //     return require("../../images/locked.svg");
-  //   } else {
-  //     return require("../../images/unlocked.svg");
-  //   }
-  // };
+  checkIfLocked = () => {
+    if (this.state.isLocked[0]) {
+      return require("../../images/locked.svg");
+    } else {
+      return require("../../images/unlocked.svg");
+    }
+  };
 
   lockAHexColor = palette => {
     const { isLocked } = this.state;
@@ -36,14 +35,6 @@ class Generator extends Component {
     this.setState({ isLocked: newLocked });
   };
 
-  determineIfColorIsLocked = index => {
-    const { isLocked } = this.state;
-    if(isLocked[index]) {
-      return ""
-    } else {
-      return "saved"
-    }
-  };
 
   generateHexColors = () => {
     const { isLocked, colors } = this.state;
@@ -55,6 +46,7 @@ class Generator extends Component {
 
   render() {
     const { colors } = this.state;
+    let changeLock = this.checkIfLocked();
 
     return (
       <div>
@@ -65,111 +57,81 @@ class Generator extends Component {
             class="color-container"
             style={{ backgroundColor: colors[0] }}
           >
-            <button
+            <img
+              src={changeLock}
               id="1"
               class="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(0)}
-            >
-              <i
-                id="1"
-                class={`lock${this.determineIfColorIsLocked(0)}`}
-              />
-            </button>
-            <p id="color1-name" class="color-hex">
-              {colors[0]}
-            </p>
+            />
+            <p class="hex-color">{colors[0]}</p>
           </div>
           <div
             id="color2"
             class="color-container"
             style={{ backgroundColor: colors[1] }}
           >
-            <button
+            <img
+              src={changeLock}
               id="2"
               class="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(1)}
-            >
-              <i
-                id="2"
-                class={`lock${this.determineIfColorIsLocked(1)}`}
-              />
-            </button>
-            <p id="color2-name" class="color-hex">
-              {colors[1]}
-            </p>
+            />
+            <p class="hex-color">{colors[1]}</p>
           </div>
           <div
             id="color3"
             class="color-container"
             style={{ backgroundColor: colors[2] }}
           >
-            <button
+            <img
+              src={changeLock}
               id="3"
               class="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(2)}
-            >
-              <i
-                id="3"
-                class={`lock${this.determineIfColorIsLocked(2)}`}
-              />
-            </button>
-            <p id="color3-name" class="color-hex">
-              {colors[2]}
-            </p>
+            />
+            <p class="hex-color">{colors[2]}</p>
           </div>
           <div
             id="color4"
             class="color-container"
             style={{ backgroundColor: colors[3] }}
           >
-            <button
+            <img
+              src={changeLock}
               id="4"
               class="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(3)}
-            >
-              <i
-                id="4"
-                class={`lock${this.determineIfColorIsLocked(3)}`}
-              />
-            </button>
-            <p id="color4-name" class="color-hex">
-              {colors[3]}
-            </p>
+            />
+            <p class="hex-color">{colors[3]}</p>
           </div>
           <div
             id="color5"
             class="color-container"
             style={{ backgroundColor: colors[4] }}
           >
-            <button
+            <img
+              src={changeLock}
               id="5"
               class="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(4)}
-            >
-              <i
-                id="5"
-                class={`lock${this.determineIfColorIsLocked(4)}`}
-              />
-            </button>
-            <p id="color5-name" class="color-hex">
-              {colors[4]}
-            </p>
+            />
+            <p class="hex-color">{colors[4]}</p>
           </div>
         </section>
         <section class="generate-palette">
           <input
             type="button"
             class="generate-palette-btn button"
-            value="Regenerate Colors"
+            value="Click me to see more colors"
             onClick={this.generateHexColors}
           />
         </section>
-        {/* <Form colors={this.state.colors} /> */}
+        {/* <NewPaletteForm colors={this.state.colors} /> */}
       </div>
     );
   }
