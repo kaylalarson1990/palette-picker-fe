@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import randomHexColor from "random-hex-color";
+import NewPaletteForm from "../NewPaletteForm/NewPaletteForm"
 import "./Generator.css";
 
 class Generator extends Component {
@@ -55,87 +56,87 @@ class Generator extends Component {
     return (
       <div>
         <h1>Palette Picker</h1>
-        <section class="palette-container">
+        <section className="palette-container">
           <div
             id="color1"
-            class="color-container"
+            className="color-container"
             style={{ backgroundColor: colors[0] }}
           >
             <img
               src={lockOne}
               id="1"
-              class="color-lock"
+              className="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(0)}
             />
-            <p class="hex-color">{colors[0]}</p>
+            <p className="hex-color">{colors[0]}</p>
           </div>
           <div
             id="color2"
-            class="color-container"
+            className="color-container"
             style={{ backgroundColor: colors[1] }}
           >
             <img
               src={lockTwo}
               id="2"
-              class="color-lock"
+              className="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(1)}
             />
-            <p class="hex-color">{colors[1]}</p>
+            <p className="hex-color">{colors[1]}</p>
           </div>
           <div
             id="color3"
-            class="color-container"
+            className="color-container"
             style={{ backgroundColor: colors[2] }}
           >
             <img
               src={lockThree}
               id="3"
-              class="color-lock"
+              className="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(2)}
             />
-            <p class="hex-color">{colors[2]}</p>
+            <p className="hex-color">{colors[2]}</p>
           </div>
           <div
             id="color4"
-            class="color-container"
+            className="color-container"
             style={{ backgroundColor: colors[3] }}
           >
             <img
               src={lockFour}
               id="4"
-              class="color-lock"
+              className="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(3)}
             />
-            <p class="hex-color">{colors[3]}</p>
+            <p className="hex-color">{colors[3]}</p>
           </div>
           <div
             id="color5"
-            class="color-container"
+            className="color-container"
             style={{ backgroundColor: colors[4] }}
           >
             <img
               src={lockFive}
               id="5"
-              class="color-lock"
+              className="color-lock"
               value="Lock Color"
               onClick={() => this.lockAHexColor(4)}
             />
-            <p class="hex-color">{colors[4]}</p>
+            <p className="hex-color">{colors[4]}</p>
           </div>
         </section>
-        <section class="generate-palette">
+        <section className="generate-palette">
           <input
             type="button"
-            class="generate-palette-btn button"
+            className="generate-palette-btn button"
             value="Click me to see more colors"
             onClick={this.generateHexColors}
           />
         </section>
-        {/* <NewPaletteForm colors={this.state.colors} /> */}
+        <NewPaletteForm />
       </div>
     );
   }

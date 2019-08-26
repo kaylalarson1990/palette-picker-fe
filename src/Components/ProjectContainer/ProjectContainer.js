@@ -10,7 +10,7 @@ export const ProjectContainer = props => {
         : <p>Start saving your favorite color palettes to a new project!</p>
 
   return (
-    <section class="saved-projects-section">
+    <section className="saved-projects-section">
       {savedProjects}
     </section>
   );
