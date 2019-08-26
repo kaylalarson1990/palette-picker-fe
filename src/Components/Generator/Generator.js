@@ -24,31 +24,31 @@ class Generator extends Component {
   //   }
   // };
 
-  lockAHexColor = target => {
+  lockAHexColor = palette => {
     const { isLocked } = this.state;
     const newLocked = isLocked.map((bool, index) => {
-      if (index === target) {
-        return require("../../images/locked.svg") && !bool;
+      if (index === palette) {
+        return !bool;
       } else {
-        return require("../../images/unlocked.svg") && bool;
+        return bool;
       }
     });
     this.setState({ isLocked: newLocked });
   };
 
-  determineIfColorIsLocked = i => {
+  determineIfColorIsLocked = index => {
     const { isLocked } = this.state;
-    if(isLocked[i]) {
+    if(isLocked[index]) {
       return ""
     } else {
-      return "-open"
+      return "saved"
     }
   };
 
   generateHexColors = () => {
     const { isLocked, colors } = this.state;
-    const newColors = colors.map((color, i) => {
-      return isLocked[i] ? color : randomHexColor();
+    const newColors = colors.map((color, index) => {
+      return isLocked[index] ? color : randomHexColor();
     });
     this.setState({ colors: newColors });
   };
@@ -61,6 +61,7 @@ class Generator extends Component {
 
     return (
       <div>
+        <h1>Palette Picker</h1>
         <section class="palette-container">
           <div
             id="color1"
