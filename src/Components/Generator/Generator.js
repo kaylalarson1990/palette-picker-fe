@@ -132,7 +132,7 @@ export class Generator extends Component {
           <input
             type="button"
             className="generate-palette-btn button"
-            value="Click me to see more colors"
+            value="Generate colors"
             onClick={this.generateHexColors}
           />
         </section>

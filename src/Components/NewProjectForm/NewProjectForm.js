@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import './NewPaletteForm.css'
 
-export class NewPaletteForm extends Component {
-  constructor(props) {
-    super(props);
+class NewProjectForm extends Component {
+  constructor() {
+    super();
     this.state = {
       form: false,
-      palatte_name: ''
+      project_name: ''
     }
   }
 
@@ -16,7 +15,7 @@ export class NewPaletteForm extends Component {
 
   handleChange = e => {
     this.setState({
-      palatte_name: e.target.value
+      project_name: e.target.value
     })
   }
 
@@ -26,12 +25,12 @@ export class NewPaletteForm extends Component {
   }
 
   render() {
-    return (
+    return(
       <section>
-      {!this.state.form && <button className='toggle-form' onClick={e => this.populateForm()}>Save palette</button>}
+      {!this.state.form && <button className='toggle-form' onClick={e => this.populateForm()}>Save project</button>}
       { this.state.form && 
         <form>
-          <input className='palette-name' placeholder='Enter Palatte Name...' value={this.state.palatte_name} onChange={e => this.handleChange(e)}/>
+          <input className='project-name' placeholder='Enter Project Name...' value={this.state.project_name} onChange={e => this.handleChange(e)}/>
           <button onClick={e => this.handleSubmit(e)}>Submit</button>
         </form>
       }
@@ -40,4 +39,4 @@ export class NewPaletteForm extends Component {
   }
 }
 
-export default NewPaletteForm;
+export default NewProjectForm;
