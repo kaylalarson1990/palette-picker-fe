@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generator should match the snapshot 1`] = `
+<div>
+  <h1>
+    Color Therapy
+  </h1>
+  <section
+    className="palette-container"
+  >
+    <div
+      className="color-container"
+      id="color1"
+      style={
+        Object {
+          "backgroundColor": "#ed4329",
+        }
+      }
+    >
+      <img
+        className="color-lock"
+        id="1"
+        onClick={[Function]}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "unlocked.svg",
+          }
+        }
+        value="Lock Color"
+      />
+      <p
+        className="hex-color"
+      >
+        #ed4329
+      </p>
+    </div>
+    <div
+      className="color-container"
+      id="color2"
+      style={
+        Object {
+          "backgroundColor": "#ed5c62",
+        }
+      }
+    >
+      <img
+        className="color-lock"
+        id="2"
+        onClick={[Function]}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "unlocked.svg",
+          }
+        }
+        value="Lock Color"
+      />
+      <p
+        className="hex-color"
+      >
+        #ed5c62
+      </p>
+    </div>
+    <div
+      className="color-container"
+      id="color3"
+      style={
+        Object {
+          "backgroundColor": "#383b93",
+        }
+      }
+    >
+      <img
+        className="color-lock"
+        id="3"
+        onClick={[Function]}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "unlocked.svg",
+          }
+        }
+        value="Lock Color"
+      />
+      <p
+        className="hex-color"
+      >
+        #383b93
+      </p>
+    </div>
+    <div
+      className="color-container"
+      id="color4"
+      style={
+        Object {
+          "backgroundColor": "#d5b79a",
+        }
+      }
+    >
+      <img
+        className="color-lock"
+        id="4"
+        onClick={[Function]}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "unlocked.svg",
+          }
+        }
+        value="Lock Color"
+      />
+      <p
+        className="hex-color"
+      >
+        #d5b79a
+      </p>
+    </div>
+    <div
+      className="color-container"
+      id="color5"
+      style={
+        Object {
+          "backgroundColor": "#61830b",
+        }
+      }
+    >
+      <img
+        className="color-lock"
+        id="5"
+        onClick={[Function]}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "unlocked.svg",
+          }
+        }
+        value="Lock Color"
+      />
+      <p
+        className="hex-color"
+      >
+        #61830b
+      </p>
+    </div>
+  </section>
+  <section
+    className="generate-palette"
+  >
+    <input
+      className="generate-palette-btn button"
+      onClick={[Function]}
+      type="button"
+      value="Click me to see more colors"
+    />
+  </section>
+  <NewPaletteForm />
+</div>
+`;

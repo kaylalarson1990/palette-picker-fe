@@ -4,7 +4,7 @@ import ProjectContainer from "../ProjectContainer/ProjectContainer"
 import "./App.css";
 import { fetchAllProjects, fetchAllPalettes } from "../../apiCalls";
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -28,9 +28,9 @@ class App extends Component {
   }
 }
 
-export const mapDispatchToProps = dispatch => ({
-  fetchAllProjects: () => dispatch(fetchAllProjects()),
-  fetchAllPalettes: () => dispatch(fetchAllPalettes())
-});
+// export const mapDispatchToProps = dispatch => ({
+//   fetchAllProjects: () => dispatch(fetchAllProjects()),
+//   fetchAllPalettes: () => dispatch(fetchAllPalettes())
+// });
 
 export default App;

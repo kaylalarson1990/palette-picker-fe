@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import './NewPaletteForm.css'
 
-class NewPaletteForm extends Component {
+export class NewPaletteForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +28,7 @@ class NewPaletteForm extends Component {
   render() {
     return (
       <section>
-      {!this.state.form && <button className='toggle-form' onClick={e => this.populateForm()}>Create Palette</button>}
+      {!this.state.form && <button className='toggle-form' onClick={e => this.populateForm()}>Save palette</button>}
       { this.state.form && 
         <form>
           <input className='palette-name' placeholder='Enter Palatte Name...' value={this.state.palatteName} onChange={e => this.handleChange(e)}/>
