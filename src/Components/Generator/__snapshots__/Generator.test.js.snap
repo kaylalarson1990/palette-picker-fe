@@ -13,7 +13,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color1"
       style={
         Object {
-          "backgroundColor": "#ed4329",
+          "backgroundColor": "#7c7fab",
         }
       }
     >
@@ -36,7 +36,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #ed4329
+        #7c7fab
       </p>
     </div>
     <div
@@ -44,7 +44,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color2"
       style={
         Object {
-          "backgroundColor": "#ed5c62",
+          "backgroundColor": "#013985",
         }
       }
     >
@@ -67,7 +67,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #ed5c62
+        #013985
       </p>
     </div>
     <div
@@ -75,7 +75,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color3"
       style={
         Object {
-          "backgroundColor": "#383b93",
+          "backgroundColor": "#c733e2",
         }
       }
     >
@@ -98,7 +98,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #383b93
+        #c733e2
       </p>
     </div>
     <div
@@ -106,7 +106,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color4"
       style={
         Object {
-          "backgroundColor": "#d5b79a",
+          "backgroundColor": "#80508c",
         }
       }
     >
@@ -129,7 +129,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #d5b79a
+        #80508c
       </p>
     </div>
     <div
@@ -137,7 +137,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color5"
       style={
         Object {
-          "backgroundColor": "#61830b",
+          "backgroundColor": "#bb7fe3",
         }
       }
     >
@@ -160,7 +160,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #61830b
+        #bb7fe3
       </p>
     </div>
   </section>
