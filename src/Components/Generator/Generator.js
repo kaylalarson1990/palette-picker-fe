@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import randomHexColor from "random-hex-color";
-import NewPaletteForm from "../NewPaletteForm/NewPaletteForm"
+import NewPaletteForm from "../NewPaletteForm/NewPaletteForm";
+import {connect} from 'react-redux';
+import {gatherPalettes} from '../../actions/index';
+import {postPalette, fetchAllPalettes} from '../../apiCalls'
 import "./Generator.css";
 
 export class Generator extends Component {
@@ -44,6 +47,21 @@ export class Generator extends Component {
     });
     this.setState({ colors: newColors });
   };
+
+  addNewPalette = async data => {
+    let palette = {
+      project_id: data.project,
+      palette_name: data.palette,
+      c1: this.state.colors[0],
+      c2: this.state.colors[1],
+      c3: this.state.colors[2],
+      c4: this.state.colors[3],
+      c5: this.state.colors[4]
+    }
+    await postPalette(palette);
+    fetchAllPalettes()
+    .then(data => this.props.gatherPalettes(data));
+  }
 
   render() {
     const { colors } = this.state;
@@ -136,10 +154,14 @@ export class Generator extends Component {
             onClick={this.generateHexColors}
           />
         </section>
-        <NewPaletteForm />
+        <NewPaletteForm addNewPalette={this.addNewPalette}/>
       </div>
     );
   }
 }
 
-export default Generator;
+const mapDispatchToProps = dispatch => ({
+  gatherPalettes: (palettes) => dispatch(gatherPalettes(palettes))
+})
+
+export default connect(null, mapDispatchToProps)(Generator);
