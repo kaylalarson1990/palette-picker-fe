@@ -3,7 +3,7 @@ import randomHexColor from "random-hex-color";
 import NewPaletteForm from "../NewPaletteForm/NewPaletteForm"
 import "./Generator.css";
 
-class Generator extends Component {
+export class Generator extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,7 +55,7 @@ class Generator extends Component {
 
     return (
       <div>
-        <h1>Palette Picker</h1>
+        <h1>Color Therapy</h1>
         <section className="palette-container">
           <div
             id="color1"
@@ -132,7 +132,7 @@ class Generator extends Component {
           <input
             type="button"
             className="generate-palette-btn button"
-            value="Click me to see more colors"
+            value="Generate colors"
             onClick={this.generateHexColors}
           />
         </section>

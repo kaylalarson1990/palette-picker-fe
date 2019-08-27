@@ -4,17 +4,16 @@ import ProjectContainer from "../ProjectContainer/ProjectContainer"
 import "./App.css";
 import { fetchAllProjects, fetchAllPalettes } from "../../apiCalls";
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
-      projects: [],
       palettes: []
     };
   }
 
   componentDidMount() {
-    fetchAllProjects().then(data => this.setState({ projects: data }));
+    // fetchAllProjects().then(data => this.setState({ projects: data }));
     fetchAllPalettes().then(data => this.setState({ palettes: data }));
   }
 
@@ -27,10 +26,5 @@ class App extends Component {
     );
   }
 }
-
-export const mapDispatchToProps = dispatch => ({
-  fetchAllProjects: () => dispatch(fetchAllProjects()),
-  fetchAllPalettes: () => dispatch(fetchAllPalettes())
-});
 
 export default App;
