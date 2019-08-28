@@ -24,7 +24,6 @@ const Projects = (props) => {
 
   return(
     <section className='project-section'>
-    
       <div className='project-info'>
         <h3>{props.name}</h3>
         <p onClick={e => handleDelete(props.id)}>🗑</p>
