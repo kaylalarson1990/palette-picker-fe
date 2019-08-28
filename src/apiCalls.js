@@ -1,7 +1,5 @@
-const path = process.env.REACT_APP_BACKEND_URL;
-
 export const fetchAllProjects = () => {
-  return fetch(`${path}/projects`)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/projects")
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -13,7 +11,7 @@ export const fetchAllProjects = () => {
 };
 
 export const fetchAllPalettes = () => {
-  return fetch(`${path}/palettes`)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/palettes")
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -30,7 +28,7 @@ export const postProject = project => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(project)
   };
-  return fetch(`${path}/projects`, options)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/projects", options)
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -42,13 +40,13 @@ export const postProject = project => {
 };
 
 export const postPalette = palette => {
-  console.log(palette);
+  console.log(palette)
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(palette)
   };
-  return fetch(`${path}/palettes`, options)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/palettes", options)
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -65,7 +63,7 @@ export const patchProject = project => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(project)
   };
-  return fetch(`${path}/projects`, options)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/projects", options)
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -82,7 +80,7 @@ export const patchPalette = palette => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(palette)
   };
-  return fetch(`${path}/palettes`, options)
+  return fetch(process.env.REACT_APP_BACKEND_URL + "/api/v1/palettes", options)
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -100,7 +98,10 @@ export const deleteProject = project => {
       "Content-Type": "application/json"
     }
   };
-  return fetch(`${path}/projects/${project.id}`, options)
+  return fetch(
+    process.env.REACT_APP_BACKEND_URL + `/api/v1/projects/${project.id}`,
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -118,7 +119,10 @@ export const deletePalette = palette => {
       "Content-Type": "application/json"
     }
   };
-  return fetch(`${path}/palettes/${palette.id}`, options)
+  return fetch(
+    process.env.REACT_APP_BACKEND_URL + `/api/v1/palettes/${palette.id}`,
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
