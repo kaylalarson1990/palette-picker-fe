@@ -11,7 +11,7 @@ const Projects = (props) => {
       return null
     }
   })
-  console.log(paletteList)
+
   return(
     <section className='project-section'>
       <h3>{props.name}</h3>
