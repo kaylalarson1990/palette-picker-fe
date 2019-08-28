@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {postProject, fetchAllProjects} from '../../apiCalls';
+import { gatherProjects } from '../../actions';
 
 class NewProjectForm extends Component {
   constructor() {
@@ -19,8 +22,11 @@ class NewProjectForm extends Component {
     })
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
+    await postProject({project_name: this.state.project_name})
+    let projects = await fetchAllProjects()
+    this.props.updateProjectsList(projects)
     this.setState({ form: false})
   }
 
@@ -39,4 +45,8 @@ class NewProjectForm extends Component {
   }
 }
 
-export default NewProjectForm;
+const mapDispatchToProps = dispatch => ({
+  updateProjectsList: (projects) => dispatch(gatherProjects(projects))
+})
+
+export default connect(null, mapDispatchToProps)(NewProjectForm);
