@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from 'react-redux';
-import { postProject, fetchAllProjects } from "../../apiCalls"
-import { gatherProjects, addProject } from "../../actions/index"
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {postProject, fetchAllProjects} from '../../apiCalls';
+import { gatherProjects } from '../../actions';
 
 export class NewProjectForm extends Component {
   constructor() {
@@ -22,19 +22,13 @@ export class NewProjectForm extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    this.setState({ form: false });
-    const newProject = { ...this.state };
-    postProject(newProject)
-      .then(() => fetchAllProjects())
-      .then(projects => this.props.gatherProjects(projects))
-    this.clearInputs();
-  };
-
-  clearInputs = () => {
-    this.setState({project_name: ''})
-}
+    await postProject({project_name: this.state.project_name})
+    let projects = await fetchAllProjects()
+    this.props.updateProjectsList(projects)
+    this.setState({ form: false})
+  }
 
   render() {
     return (
@@ -60,13 +54,8 @@ export class NewProjectForm extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  projects: state.projects
-});
-
-export const mapDispatchToProps = dispatch => ({
-  addProject: project => dispatch(addProject(project)),
-  gatherProjects: projects => dispatch(gatherProjects(projects))
+const mapDispatchToProps = dispatch => ({
+  updateProjectsList: (projects) => dispatch(gatherProjects(projects))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewProjectForm);
+export default connect(null, mapDispatchToProps)(NewProjectForm);
