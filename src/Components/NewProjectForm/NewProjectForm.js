@@ -8,7 +8,8 @@ export class NewProjectForm extends Component {
     super();
     this.state = {
       form: false,
-      project_name: ""
+      project_name: "",
+      error: '',
     };
   }
 
@@ -24,10 +25,17 @@ export class NewProjectForm extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    let nameCheck = this.props.projects.find(project => {
+      return project.project_name === this.state.project_name
+    })
+    if(nameCheck){
+      this.setState({ error: 'Name Already Exist'})
+      return 
+    }
     await postProject({project_name: this.state.project_name})
     let projects = await fetchAllProjects()
     this.props.updateProjectsList(projects)
-    this.setState({ form: false})
+    this.setState({ form: false, error: ''})
   }
 
   render() {
@@ -40,6 +48,7 @@ export class NewProjectForm extends Component {
         )}
         {this.state.form && (
           <form>
+            {this.state.error}
             <input
               className="project-name"
               placeholder="Enter Project Name..."
@@ -54,8 +63,12 @@ export class NewProjectForm extends Component {
   }
 }
 
+const mapStateToProps = store => ({
+  projects: store.projects
+})
+
 const mapDispatchToProps = dispatch => ({
   updateProjectsList: (projects) => dispatch(gatherProjects(projects))
 })
 
-export default connect(null, mapDispatchToProps)(NewProjectForm);
+export default connect(mapStateToProps, mapDispatchToProps)(NewProjectForm);
