@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const Projects = ({project_name}) => {
+export const Projects = ({project_name}) => {
   console.log(project_name)
   return(
     <section>

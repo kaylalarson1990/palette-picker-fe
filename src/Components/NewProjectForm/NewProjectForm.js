@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { postProject, fetchAllProjects } from "../../apiCalls"
 import { gatherProjects, addProject } from "../../actions/index"
 
-class NewProjectForm extends Component {
+export class NewProjectForm extends Component {
   constructor() {
     super();
     this.state = {

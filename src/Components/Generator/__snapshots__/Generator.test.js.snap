@@ -13,7 +13,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color1"
       style={
         Object {
-          "backgroundColor": "#77eb77",
+          "backgroundColor": "#f7c269",
         }
       }
     >
@@ -36,7 +36,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #77eb77
+        #f7c269
       </p>
     </div>
     <div
@@ -44,7 +44,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color2"
       style={
         Object {
-          "backgroundColor": "#a5b6f5",
+          "backgroundColor": "#8859d2",
         }
       }
     >
@@ -67,7 +67,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #a5b6f5
+        #8859d2
       </p>
     </div>
     <div
@@ -75,7 +75,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color3"
       style={
         Object {
-          "backgroundColor": "#131fd9",
+          "backgroundColor": "#f83dda",
         }
       }
     >
@@ -98,7 +98,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #131fd9
+        #f83dda
       </p>
     </div>
     <div
@@ -106,7 +106,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color4"
       style={
         Object {
-          "backgroundColor": "#bbe3df",
+          "backgroundColor": "#0e5aaa",
         }
       }
     >
@@ -129,7 +129,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #bbe3df
+        #0e5aaa
       </p>
     </div>
     <div
@@ -137,7 +137,7 @@ exports[`Generator should match the snapshot 1`] = `
       id="color5"
       style={
         Object {
-          "backgroundColor": "#f5643f",
+          "backgroundColor": "#568c7a",
         }
       }
     >
@@ -160,7 +160,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #f5643f
+        #568c7a
       </p>
     </div>
   </section>
@@ -171,9 +171,11 @@ exports[`Generator should match the snapshot 1`] = `
       className="generate-palette-btn button"
       onClick={[Function]}
       type="button"
-      value="Click me to see more colors"
+      value="Generate colors"
     />
   </section>
-  <NewPaletteForm />
+  <Connect(NewPaletteForm)
+    addNewPalette={[Function]}
+  />
 </div>
 `;
