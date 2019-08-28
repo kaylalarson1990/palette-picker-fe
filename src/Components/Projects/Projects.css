@@ -3,3 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+}
