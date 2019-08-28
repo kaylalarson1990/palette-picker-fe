@@ -1,0 +1,17 @@
+.palette-box {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+
+.box-color {
+  border: 1px solid;
+  margin: 3px 10px;
+  height: 40px;
+  width: 15%
+}
+
+.palette-title {
+  width: 200px;
+}
