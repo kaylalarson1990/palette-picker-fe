@@ -50,7 +50,7 @@ export class NewPaletteForm extends Component {
             <option>SELECT PROJECT</option>
             {projects}
           </select>
-          <input className='palette-name' placeholder='Enter Palatte Name...' value={this.state.palatte_name} onChange={e => this.handleChange(e)}/>
+          <input name="palette-name" className='palette-input-name' placeholder='Enter Palatte Name...' value={this.state.palatte_name} onChange={e => this.handleChange(e)}/>
           <button onClick={e => this.handleSubmit(e)}>Submit</button>
         </form>
       }
@@ -59,7 +59,7 @@ export class NewPaletteForm extends Component {
   }
 }
 
-const mapStateToProps = store => ({
+export const mapStateToProps = store => ({
   ...store
 })
 

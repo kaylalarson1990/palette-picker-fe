@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectContainer should match the snapshot 1`] = `
-<section
-  className="saved-projects-section"
->
-  <[object Object]
-    key="13"
-    project={
-      Object {
-        "id": 13,
-        "project_name": "Test Project",
-      }
-    }
-  />
-</section>
+<Fragment>
+  <section
+    className="project-container"
+  >
+    <Connect(NewProjectForm) />
+  </section>
+  <section
+    className="saved-projects-section"
+  >
+    <Projects
+      key="13"
+      name="Test Project"
+    />
+  </section>
+</Fragment>
 `;
