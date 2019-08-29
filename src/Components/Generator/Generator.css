@@ -26,7 +26,11 @@ p {
   justify-content: flex-end;
 }
 
-.color-lock {
+.color-lock1,
+.color-lock2,
+.color-lock3,
+.color-lock4,
+.color-lock5 {
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
@@ -34,7 +38,11 @@ p {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.color-lock:hover {
+.color-lock1:hover,
+.color-lock2:hover,
+.color-lock3:hover,
+.color-lock4:hover,
+.color-lock5:hover {
   width: 45px;
 }
 
