@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import randomHexColor from "random-hex-color";
 import NewPaletteForm from "../NewPaletteForm/NewPaletteForm";
+import NewProjectForm from "../NewProjectForm/NewProjectForm";
 import { connect } from "react-redux";
 import { gatherPalettes } from "../../actions/index";
 import { postPalette, fetchAllPalettes } from "../../apiCalls";
@@ -85,7 +86,7 @@ export class Generator extends Component {
               value="Lock Color"
               onClick={() => this.lockAHexColor(0)}
             />
-            <p className="hex-color">{colors[0]}</p>
+            <p className="hex-color">{colors[0].toUpperCase()}</p>
           </div>
           <div
             id="color2"
@@ -99,7 +100,7 @@ export class Generator extends Component {
               value="Lock Color"
               onClick={() => this.lockAHexColor(1)}
             />
-            <p className="hex-color">{colors[1]}</p>
+            <p className="hex-color">{colors[1].toUpperCase()}</p>
           </div>
           <div
             id="color3"
@@ -113,7 +114,7 @@ export class Generator extends Component {
               value="Lock Color"
               onClick={() => this.lockAHexColor(2)}
             />
-            <p className="hex-color">{colors[2]}</p>
+            <p className="hex-color">{colors[2].toUpperCase()}</p>
           </div>
           <div
             id="color4"
@@ -127,7 +128,7 @@ export class Generator extends Component {
               value="Lock Color"
               onClick={() => this.lockAHexColor(3)}
             />
-            <p className="hex-color">{colors[3]}</p>
+            <p className="hex-color">{colors[3].toUpperCase()}</p>
           </div>
           <div
             id="color5"
@@ -141,7 +142,7 @@ export class Generator extends Component {
               value="Lock Color"
               onClick={() => this.lockAHexColor(4)}
             />
-            <p className="hex-color">{colors[4]}</p>
+            <p className="hex-color">{colors[4].toUpperCase()}</p>
           </div>
         </section>
         <section className="generate-palette">
@@ -152,7 +153,10 @@ export class Generator extends Component {
             onClick={this.generateHexColors}
           />
         </section>
-        <NewPaletteForm addNewPalette={this.addNewPalette} />
+        <section className="project-container">
+          <NewProjectForm />
+          <NewPaletteForm addNewPalette={this.addNewPalette} />
+        </section>
       </div>
     );
   }

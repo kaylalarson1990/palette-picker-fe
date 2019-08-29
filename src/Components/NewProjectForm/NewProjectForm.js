@@ -46,7 +46,7 @@ export class NewProjectForm extends Component {
             className="toggle-form toggle-btn"
             onClick={e => this.populateForm()}
           >
-            Save project
+            Add a project
           </button>
         )}
         {this.state.form && (

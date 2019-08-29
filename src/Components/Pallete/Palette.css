@@ -1,5 +1,5 @@
 .palette-box {
-  align-content: center;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   width: 900px;
@@ -8,10 +8,29 @@
 .box-color {
   border: 1px solid;
   margin: 3px 10px;
-  height: 40px;
+  height: 45px;
   width: 15%
 }
 
 .palette-title {
   width: 200px;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  width: 315px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #4D63AD;
+  border: 1px solid #4D63AD;
+}
+
+section {
+  margin: 20px;
 }
