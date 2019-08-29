@@ -10,15 +10,18 @@ describe("projectsReducer", () => {
   it("should set all palettes from state", () => {
     const action = {
       type: "GATHER_PROJECTS",
-      projects: [{
-          project_name: 'Test Project'
-      }]
+      projects: [
+        {
+          project_name: "Test Project"
+        }
+      ]
     };
-    const expected = [{
-        project_name: 'Test Project'
-    }];
+    const expected = [
+      {
+        project_name: "Test Project"
+      }
+    ];
     const result = projectsReducer(undefined, action);
     expect(result).toEqual(expected);
   });
-
 });

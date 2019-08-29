@@ -42,8 +42,8 @@ p {
 .toggle-btn {
   padding: 10px;
   background-color: white;
-  border: 1px solid #4D63AD;
-  color: #4D63AD;
+  border: 1px solid #4d63ad;
+  color: #4d63ad;
   font-size: 20px;
   border-radius: 5px;
   width: 300px;
@@ -51,16 +51,16 @@ p {
   display: inline-block;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #89B6E3;
+  box-shadow: inset 0 0 0 0 #89b6e3;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
 }
 
 .toggle-btn:hover {
-  background-color: #4D63AD;
+  background-color: #4d63ad;
   color: white;
-  box-shadow: inset 400px 0 0 0 #4D63AD;
+  box-shadow: inset 400px 0 0 0 #4d63ad;
 }
 
 .toggle-btn {
@@ -69,14 +69,13 @@ p {
 }
 
 .generate-palette-btn {
-  background-color: #4D63AD;
-  border: 1px solid #4D63AD;
+  background-color: #4d63ad;
+  border: 1px solid #4d63ad;
   color: white;
 }
 
 .generate-palette-btn:hover {
-  background-color: #89B6E3;
-  border: 1px solid #89B6E3;
+  background-color: #89b6e3;
+  border: 1px solid #89b6e3;
   color: white;
 }
-

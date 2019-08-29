@@ -1,7 +1,7 @@
-import React from 'react';
-import { App, mapDispatchToProps } from './App';
+import React from "react";
+import { App, mapDispatchToProps } from "./App";
 import { shallow } from "enzyme";
-import { gatherPalettes } from '../../actions/index'
+import { gatherPalettes } from "../../actions/index";
 import "../../../setupTests";
 
 describe("App", () => {
@@ -16,7 +16,7 @@ describe("App", () => {
   it("should match snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});
 
 describe("mapDispatchToProps", () => {
   it("calls dispatch with a gatherPalettes action", () => {

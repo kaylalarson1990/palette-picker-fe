@@ -47,7 +47,10 @@ export class NewPaletteForm extends Component {
     return (
       <section>
         {!this.state.form && (
-          <button className="toggle-form toggle-btn" onClick={e => this.populateForm()}>
+          <button
+            className="toggle-form toggle-btn"
+            onClick={e => this.populateForm()}
+          >
             Save a palette
           </button>
         )}

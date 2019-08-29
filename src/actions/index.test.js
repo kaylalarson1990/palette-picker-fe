@@ -9,7 +9,7 @@ describe("actions", () => {
         project_name: "Test Project"
       }
     ];
-    
+
     mockPalettes = [
       {
         id: 1,
@@ -31,8 +31,8 @@ describe("actions", () => {
         color5: "Purple",
         project_id: 13
       }
-    ]
-  })
+    ];
+  });
   it("should have a type of GATHER_PROJECTS", () => {
     const projects = { projects: [{ project_name: "Test Project" }] };
     const expectedAction = {
@@ -85,8 +85,8 @@ describe("actions", () => {
     expect(result).toEqual(expected);
   });
 
-  it('should have a type of ADD_PALETTE', () => {
-    const newPalette = 'New Palette';
+  it("should have a type of ADD_PALETTE", () => {
+    const newPalette = "New Palette";
     const expected = {
       type: "ADD_PALETTE",
       newPalette
@@ -95,8 +95,8 @@ describe("actions", () => {
     expect(result).toEqual(expected);
   });
 
-  it('should have a type of ADD_PROJECT', () => {
-    const newProject = 'New Project';
+  it("should have a type of ADD_PROJECT", () => {
+    const newProject = "New Project";
     const expected = {
       type: "ADD_PROJECT",
       newProject
@@ -105,26 +105,25 @@ describe("actions", () => {
     expect(result).toEqual(expected);
   });
 
-  it('should have a type of DELETE_PROJECT', () => {
-    const id = 1
+  it("should have a type of DELETE_PROJECT", () => {
+    const id = 1;
     const expected = {
-      type: 'DELETE_PROJECT',
+      type: "DELETE_PROJECT",
       id
-    }
-    const result = actions.deleteProject(id)
+    };
+    const result = actions.deleteProject(id);
 
     expect(result).toEqual(expected);
   });
 
-  it('should have a type of DELETE_PALETTE', () => {
-    const id = 1
+  it("should have a type of DELETE_PALETTE", () => {
+    const id = 1;
     const expected = {
-      type: 'DELETE_PALETTE',
+      type: "DELETE_PALETTE",
       id
-    }
-    const result = actions.deletePalette(id)
+    };
+    const result = actions.deletePalette(id);
 
     expect(result).toEqual(expected);
   });
-
 });
