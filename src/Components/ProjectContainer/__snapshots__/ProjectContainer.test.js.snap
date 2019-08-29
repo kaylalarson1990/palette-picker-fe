@@ -3,11 +3,6 @@
 exports[`ProjectContainer should match the snapshot 1`] = `
 <Fragment>
   <section
-    className="project-container"
-  >
-    <Connect(NewProjectForm) />
-  </section>
-  <section
     className="saved-projects-section"
   >
     <Connect(Projects)

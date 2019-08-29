@@ -9,6 +9,7 @@ exports[`Projects should match the snapshot 1`] = `
   >
     <h3 />
     <p
+      className="delete-btn"
       onClick={[Function]}
     >
       🗑

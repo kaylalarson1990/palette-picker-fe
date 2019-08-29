@@ -13,12 +13,12 @@ exports[`Generator should match the snapshot 1`] = `
       id="color1"
       style={
         Object {
-          "backgroundColor": "#ced74f",
+          "backgroundColor": "#7cc9ea",
         }
       }
     >
       <img
-        className="color-lock"
+        className="color-lock1"
         id="1"
         onClick={[Function]}
         src={
@@ -36,7 +36,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #ced74f
+        #7CC9EA
       </p>
     </div>
     <div
@@ -44,12 +44,12 @@ exports[`Generator should match the snapshot 1`] = `
       id="color2"
       style={
         Object {
-          "backgroundColor": "#b93fcb",
+          "backgroundColor": "#d9c470",
         }
       }
     >
       <img
-        className="color-lock"
+        className="color-lock2"
         id="2"
         onClick={[Function]}
         src={
@@ -67,7 +67,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #b93fcb
+        #D9C470
       </p>
     </div>
     <div
@@ -75,12 +75,12 @@ exports[`Generator should match the snapshot 1`] = `
       id="color3"
       style={
         Object {
-          "backgroundColor": "#422b5a",
+          "backgroundColor": "#3e8d89",
         }
       }
     >
       <img
-        className="color-lock"
+        className="color-lock3"
         id="3"
         onClick={[Function]}
         src={
@@ -98,7 +98,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #422b5a
+        #3E8D89
       </p>
     </div>
     <div
@@ -106,12 +106,12 @@ exports[`Generator should match the snapshot 1`] = `
       id="color4"
       style={
         Object {
-          "backgroundColor": "#fd4f00",
+          "backgroundColor": "#2bd459",
         }
       }
     >
       <img
-        className="color-lock"
+        className="color-lock4"
         id="4"
         onClick={[Function]}
         src={
@@ -129,7 +129,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #fd4f00
+        #2BD459
       </p>
     </div>
     <div
@@ -137,12 +137,12 @@ exports[`Generator should match the snapshot 1`] = `
       id="color5"
       style={
         Object {
-          "backgroundColor": "#fdc70e",
+          "backgroundColor": "#fcea9b",
         }
       }
     >
       <img
-        className="color-lock"
+        className="color-lock5"
         id="5"
         onClick={[Function]}
         src={
@@ -160,7 +160,7 @@ exports[`Generator should match the snapshot 1`] = `
       <p
         className="hex-color"
       >
-        #fdc70e
+        #FCEA9B
       </p>
     </div>
   </section>
@@ -168,14 +168,19 @@ exports[`Generator should match the snapshot 1`] = `
     className="generate-palette"
   >
     <input
-      className="generate-palette-btn button"
+      className="generate-palette-btn"
       onClick={[Function]}
       type="button"
       value="Generate colors"
     />
   </section>
-  <Connect(NewPaletteForm)
-    addNewPalette={[Function]}
-  />
+  <section
+    className="project-container"
+  >
+    <Connect(NewProjectForm) />
+    <Connect(NewPaletteForm)
+      addNewPalette={[Function]}
+    />
+  </section>
 </div>
 `;

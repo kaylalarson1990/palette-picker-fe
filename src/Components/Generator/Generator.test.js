@@ -41,6 +41,64 @@ describe("palette lock (lockAHexColor)", () => {
   });
 });
 
+describe("generateHexColors", () => {
+  it("should call generateHexColors when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.generateHexColors = jest.fn();
+    wrapper.find(".generate-palette-btn").simulate("click", {});
+    instance.generateHexColors()
+    expect(instance.generateHexColors).toBeCalled();
+  });
+});
+
+describe("lockAHexColor", () => {
+  it("should call lockAHexColor when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.lockAHexColor = jest.fn();
+    wrapper.find(".color-lock1").simulate("click", {});
+    expect(instance.lockAHexColor).toBeCalled();
+  });
+
+  it("should call lockAHexColor when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.lockAHexColor = jest.fn();
+    wrapper.find(".color-lock2").simulate("click", {});
+    expect(instance.lockAHexColor).toBeCalled();
+  });
+
+  it("should call lockAHexColor when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.lockAHexColor = jest.fn();
+    wrapper.find(".color-lock3").simulate("click", {});
+    expect(instance.lockAHexColor).toBeCalled();
+  });
+
+  it("should call lockAHexColor when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.lockAHexColor = jest.fn();
+    wrapper.find(".color-lock4").simulate("click", {});
+    expect(instance.lockAHexColor).toBeCalled();
+  });
+
+  it("should call lockAHexColor when Generate New Colors button clicked", () => {
+    const wrapper = shallow(<Generator />);
+    const instance = wrapper.instance();
+
+    instance.lockAHexColor = jest.fn();
+    wrapper.find(".color-lock5").simulate("click", {});
+    expect(instance.lockAHexColor).toBeCalled();
+  });
+});
 
 describe("mapDispatchToProps", () => {
   it("calls dispatch with a gatherPalettes action", () => {

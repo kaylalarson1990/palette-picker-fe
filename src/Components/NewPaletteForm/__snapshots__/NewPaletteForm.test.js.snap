@@ -3,10 +3,10 @@
 exports[`NewPaletteForm should match the snapshot 1`] = `
 <section>
   <button
-    className="toggle-form"
+    className="toggle-form toggle-btn"
     onClick={[Function]}
   >
-    Save palette
+    Save a palette
   </button>
 </section>
 `;

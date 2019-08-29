@@ -82,7 +82,7 @@ export class Generator extends Component {
             <img
               src={lockOne}
               id="1"
-              className="color-lock"
+              className="color-lock1"
               value="Lock Color"
               onClick={() => this.lockAHexColor(0)}
             />
@@ -96,7 +96,7 @@ export class Generator extends Component {
             <img
               src={lockTwo}
               id="2"
-              className="color-lock"
+              className="color-lock2"
               value="Lock Color"
               onClick={() => this.lockAHexColor(1)}
             />
@@ -110,7 +110,7 @@ export class Generator extends Component {
             <img
               src={lockThree}
               id="3"
-              className="color-lock"
+              className="color-lock3"
               value="Lock Color"
               onClick={() => this.lockAHexColor(2)}
             />
@@ -124,7 +124,7 @@ export class Generator extends Component {
             <img
               src={lockFour}
               id="4"
-              className="color-lock"
+              className="color-lock4"
               value="Lock Color"
               onClick={() => this.lockAHexColor(3)}
             />
@@ -138,7 +138,7 @@ export class Generator extends Component {
             <img
               src={lockFive}
               id="5"
-              className="color-lock"
+              className="color-lock5"
               value="Lock Color"
               onClick={() => this.lockAHexColor(4)}
             />
@@ -148,7 +148,7 @@ export class Generator extends Component {
         <section className="generate-palette">
           <input
             type="button"
-            className="generate-palette-btn button"
+            className="generate-palette-btn"
             value="Generate colors"
             onClick={this.generateHexColors}
           />

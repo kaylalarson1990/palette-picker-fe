@@ -58,9 +58,10 @@ exports[`Projects should match the snapshot 1`] = `
     <img />
   </article>
   <p
+    className="delete-btn"
     onClick={[Function]}
   >
-    🗑
+    ❌
   </p>
 </div>
 `;
