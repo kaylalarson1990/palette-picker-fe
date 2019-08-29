@@ -9,7 +9,7 @@
   border: 1px solid;
   margin: 3px 10px;
   height: 45px;
-  width: 15%
+  width: 15%;
 }
 
 .palette-title {
@@ -27,8 +27,8 @@ button {
   margin-top: 10px;
   cursor: pointer;
   font-size: 16px;
-  color: #4D63AD;
-  border: 1px solid #4D63AD;
+  color: #4d63ad;
+  border: 1px solid #4d63ad;
 }
 
 section {

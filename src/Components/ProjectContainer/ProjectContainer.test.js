@@ -14,7 +14,6 @@ describe("ProjectContainer", () => {
     ];
     wrapper = shallow(<ProjectContainer projects={mockProject} />);
     instance = wrapper.instance();
-
   });
 
   it("should match the snapshot", () => {
