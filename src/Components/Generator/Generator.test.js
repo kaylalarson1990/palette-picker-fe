@@ -48,7 +48,7 @@ describe("generateHexColors", () => {
 
     instance.generateHexColors = jest.fn();
     wrapper.find(".generate-palette-btn").simulate("click", {});
-    instance.generateHexColors()
+    instance.generateHexColors();
     expect(instance.generateHexColors).toBeCalled();
   });
 });
