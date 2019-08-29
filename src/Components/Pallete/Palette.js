@@ -29,7 +29,7 @@ export const Palette = props => {
       <article className='box-color' style={{backgroundColor: props.c5}}>
         <img />
       </article>
-      <p className="delete-btn" onClick={e => handleDelete(props.id)}>🗑</p>
+      <p className="delete-btn" onClick={e => handleDelete(props.id)}>❌</p>
     </div>
   )
 }

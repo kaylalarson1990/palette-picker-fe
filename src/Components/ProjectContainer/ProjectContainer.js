@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Projects from "../Projects/Projects";
 import { fetchAllProjects } from "../../apiCalls";
 import { gatherProjects } from "../../actions/index";
-import NewProjectForm from "../NewProjectForm/NewProjectForm";
 
 export class ProjectContainer extends Component {
   componentDidMount() {
@@ -24,9 +23,6 @@ export class ProjectContainer extends Component {
     );
     return (
       <>
-        <section className="project-container">
-          <NewProjectForm />
-        </section>
         <section className="saved-projects-section">{savedProjects}</section>
       </>
     );

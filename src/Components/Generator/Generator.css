@@ -5,7 +5,7 @@ h1 {
 
 p {
   color: black;
-  font-size: 20px;
+  font-size: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 5px;
@@ -42,24 +42,41 @@ p {
 .toggle-btn {
   padding: 10px;
   background-color: white;
-  border: 1px black solid;
-  color: black;
-  font-size: 18px;
+  border: 1px solid #4D63AD;
+  color: #4D63AD;
+  font-size: 20px;
   border-radius: 5px;
   width: 300px;
   cursor: pointer;
   display: inline-block;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 black;
+  box-shadow: inset 0 0 0 0 #89B6E3;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
 }
 
-.generate-palette-btn:hover,
 .toggle-btn:hover {
-  background-color: black;
+  background-color: #4D63AD;
   color: white;
-  box-shadow: inset 400px 0 0 0 black;
+  box-shadow: inset 400px 0 0 0 #4D63AD;
 }
+
+.toggle-btn {
+  width: 200px;
+  margin: 10px;
+}
+
+.generate-palette-btn {
+  background-color: #4D63AD;
+  border: 1px solid #4D63AD;
+  color: white;
+}
+
+.generate-palette-btn:hover {
+  background-color: #89B6E3;
+  border: 1px solid #89B6E3;
+  color: white;
+}
+
