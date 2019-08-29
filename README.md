@@ -30,6 +30,13 @@ Palette Picker was a two week long paired project. On the front end, we used Rea
 - Redux
 - Jest/Enzyme
 
+### Screenshots
+
+![Color Theory](https://media.giphy.com/media/louwbJpJi4RCfup5RZ/giphy.gif)
+
+![Screen Shot 2019-08-29 at 8 57 08 AM](https://user-images.githubusercontent.com/37026730/63952010-ff807280-ca3b-11e9-9847-1395e9731188.png)
+
+![Screen Shot 2019-08-29 at 8 57 26 AM](https://user-images.githubusercontent.com/37026730/63952017-01e2cc80-ca3c-11e9-9cf1-4b3aab868ffb.png)
 
 ## Available Scripts
 
