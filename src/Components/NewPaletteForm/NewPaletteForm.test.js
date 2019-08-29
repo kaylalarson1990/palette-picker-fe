@@ -41,7 +41,6 @@ describe("NewPaletteForm", () => {
     instance.postProject(mockName);
     expect(instance.postProject).toHaveBeenCalledWith(mockName);
   });
-
 });
 
 describe("mapStateToProps", () => {

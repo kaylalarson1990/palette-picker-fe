@@ -41,7 +41,6 @@ describe("palette lock (lockAHexColor)", () => {
   });
 });
 
-
 describe("mapDispatchToProps", () => {
   it("calls dispatch with a gatherPalettes action", () => {
     const mockDispatch = jest.fn();

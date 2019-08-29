@@ -1,5 +1,5 @@
 export const fetchAllProjects = () => {
-  return fetch('https://palette-picker-dk.herokuapp.com/api/v1/projects')
+  return fetch("https://palette-picker-dk.herokuapp.com/api/v1/projects")
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -28,7 +28,10 @@ export const postProject = project => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(project)
   };
-  return fetch("https://palette-picker-dk.herokuapp.com/api/v1/projects", options)
+  return fetch(
+    "https://palette-picker-dk.herokuapp.com/api/v1/projects",
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -45,7 +48,10 @@ export const postPalette = palette => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(palette)
   };
-  return fetch("https://palette-picker-dk.herokuapp.com/api/v1/palettes", options)
+  return fetch(
+    "https://palette-picker-dk.herokuapp.com/api/v1/palettes",
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -62,7 +68,10 @@ export const patchProject = project => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(project)
   };
-  return fetch("https://palette-picker-dk.herokuapp.com/api/v1/projects", options)
+  return fetch(
+    "https://palette-picker-dk.herokuapp.com/api/v1/projects",
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
@@ -79,7 +88,10 @@ export const patchPalette = palette => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(palette)
   };
-  return fetch("https://palette-picker-dk.herokuapp.com/api/v1/palettes", options)
+  return fetch(
+    "https://palette-picker-dk.herokuapp.com/api/v1/palettes",
+    options
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response);
