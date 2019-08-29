@@ -18,6 +18,14 @@ describe("NewProjectForm", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should call populateForm when button is clicked", () => {
+    instance.populateForm = jest.fn();
+
+    wrapper.find(".toggle-form").simulate("change");
+    instance.populateForm();
+    expect(instance.populateForm).toHaveBeenCalled();
+  });
 });
 
 describe("mapStateToProps", () => {

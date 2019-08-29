@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Generator from "../Generator/Generator";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 import "./App.css";
 import { fetchAllPalettes } from "../../apiCalls";
 import { gatherPalettes } from "../../actions";
@@ -15,7 +15,6 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    // fetchAllProjects().then(data => this.setState({ projects: data }));
     fetchAllPalettes().then(data => this.props.gatherPalettes(data));
   }
 
@@ -29,8 +28,11 @@ export class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  gatherPalettes: (data) => dispatch(gatherPalettes(data))
-})
+export const mapDispatchToProps = dispatch => ({
+  gatherPalettes: data => dispatch(gatherPalettes(data))
+});
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);

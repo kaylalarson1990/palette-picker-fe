@@ -5,7 +5,7 @@ import './Projects.css'
 import { deleteProject, fetchAllProjects, fetchAllPalettes } from '../../apiCalls';
 import { gatherProjects, gatherPalettes } from '../../actions';
 
-const Projects = (props) => {
+export const Projects = (props) => {
   let paletteList = props.palettes.map(palette => {
     if(palette.project_id === props.id){
     return <Palette {...palette} key={palette.id} />
@@ -17,10 +17,10 @@ const Projects = (props) => {
   const handleDelete = async id => {
     await deleteProject({id})
     let projects = await fetchAllProjects()
-    props.removeProject(projects)
+    props.gatherProjects(projects)
     let palettes = await fetchAllPalettes()
-    props.removePalette(palettes)
-  }
+    props.gatherPalettes(palettes)
+  } 
 
   return(
     <section className='project-section'>
@@ -35,13 +35,13 @@ const Projects = (props) => {
   )
 }
 
-const mapStateToProps = store => ({
+export const mapStateToProps = store => ({
   palettes: store.palettes
 })
 
-const mapDispatchToProps = dispatch => ({
-  removeProject: projects => dispatch(gatherProjects(projects)),
-  removePalette: palettes => dispatch(gatherPalettes(palettes))
+export const mapDispatchToProps = dispatch => ({
+  gatherProjects: projects => dispatch(gatherProjects(projects)),
+  gatherPalettes: palettes => dispatch(gatherPalettes(palettes))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

@@ -10,7 +10,8 @@ exports[`ProjectContainer should match the snapshot 1`] = `
   <section
     className="saved-projects-section"
   >
-    <Projects
+    <Connect(Projects)
+      id={13}
       key="13"
       name="Test Project"
     />

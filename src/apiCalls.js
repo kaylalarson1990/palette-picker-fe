@@ -40,7 +40,6 @@ export const postProject = project => {
 };
 
 export const postPalette = palette => {
-  console.log(palette)
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },

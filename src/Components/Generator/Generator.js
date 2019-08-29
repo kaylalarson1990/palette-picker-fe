@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import randomHexColor from "random-hex-color";
 import NewPaletteForm from "../NewPaletteForm/NewPaletteForm";
-import {connect} from 'react-redux';
-import {gatherPalettes} from '../../actions/index';
-import {postPalette, fetchAllPalettes} from '../../apiCalls'
+import { connect } from "react-redux";
+import { gatherPalettes } from "../../actions/index";
+import { postPalette, fetchAllPalettes } from "../../apiCalls";
 import "./Generator.css";
 
 export class Generator extends Component {
@@ -19,7 +19,7 @@ export class Generator extends Component {
     this.generateHexColors();
   }
 
-  checkIfLocked = (index) => {
+  checkIfLocked = index => {
     if (this.state.isLocked[index]) {
       return require("../../images/locked.svg");
     } else {
@@ -39,7 +39,6 @@ export class Generator extends Component {
     this.setState({ isLocked: newLocked });
   };
 
-
   generateHexColors = () => {
     const { isLocked, colors } = this.state;
     const newColors = colors.map((color, index) => {
@@ -57,11 +56,10 @@ export class Generator extends Component {
       c3: this.state.colors[2],
       c4: this.state.colors[3],
       c5: this.state.colors[4]
-    }
+    };
     await postPalette(palette);
-    fetchAllPalettes()
-    .then(data => this.props.gatherPalettes(data));
-  }
+    fetchAllPalettes().then(data => this.props.gatherPalettes(data));
+  };
 
   render() {
     const { colors } = this.state;
@@ -154,14 +152,17 @@ export class Generator extends Component {
             onClick={this.generateHexColors}
           />
         </section>
-        <NewPaletteForm addNewPalette={this.addNewPalette}/>
+        <NewPaletteForm addNewPalette={this.addNewPalette} />
       </div>
     );
   }
 }
 
 export const mapDispatchToProps = dispatch => ({
-  gatherPalettes: (palettes) => dispatch(gatherPalettes(palettes))
-})
+  gatherPalettes: palettes => dispatch(gatherPalettes(palettes))
+});
 
-export default connect(null, mapDispatchToProps)(Generator);
+export default connect(
+  null,
+  mapDispatchToProps
+)(Generator);

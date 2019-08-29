@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects should match the snapshot 1`] = `
+<div
+  className="palette-box"
+>
+  <h4
+    className="palette-title"
+  />
+  <article
+    className="box-color"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <img />
+  </article>
+  <article
+    className="box-color"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <img />
+  </article>
+  <article
+    className="box-color"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <img />
+  </article>
+  <article
+    className="box-color"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <img />
+  </article>
+  <article
+    className="box-color"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <img />
+  </article>
+  <p
+    onClick={[Function]}
+  >
+    🗑
+  </p>
+</div>
+`;
