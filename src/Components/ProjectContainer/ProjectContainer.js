@@ -11,10 +11,13 @@ export class ProjectContainer extends Component {
   }
 
   render() {
-    console.log(this.props.projects);
     const savedProjects = this.props.projects.length ? (
       this.props.projects.map(project => (
-        <Projects key={project.id} name={project.project_name} id={project.id}/>
+        <Projects
+          key={project.id}
+          name={project.project_name}
+          id={project.id}
+        />
       ))
     ) : (
       <p>Start saving your favorite color palettes to a new project!</p>

@@ -1,7 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Projects should match the snapshot 1`] = `
-<section>
-  <h3 />
+<section
+  className="project-section"
+>
+  <div
+    className="project-info"
+  >
+    <h3 />
+    <p
+      onClick={[Function]}
+    >
+      🗑
+    </p>
+  </div>
+  <section>
+    <Connect(Palette)
+      c1="Red"
+      c2="Blue"
+      c3="Green"
+      c4="Yellow"
+      c5="White"
+      id={1}
+      key="1"
+      palette_name="Test Palette"
+    />
+  </section>
 </section>
 `;

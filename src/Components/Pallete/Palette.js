@@ -4,11 +4,11 @@ import './Palette.css'
 import {gatherPalettes } from '../../actions';
 import {fetchAllPalettes, deletePalette} from '../../apiCalls'
 
-const Palette = props => {
+export const Palette = props => {
   const handleDelete = async id => {
     await deletePalette({id})
     let palettes = await fetchAllPalettes()
-    props.removePalette(palettes)
+    props.gatherPalettes(palettes)
   }
 
   return (
@@ -29,14 +29,14 @@ const Palette = props => {
       <article className='box-color' style={{backgroundColor: props.c5}}>
         <img />
       </article>
-      <p onClick={e => handleDelete(props.id)}>🗑</p>
+      <p className="delete-btn" onClick={e => handleDelete(props.id)}>🗑</p>
     </div>
   )
 }
 
 
-const mapDispatchToProps = dispatch => ({
-  removePalette: palettes => dispatch(gatherPalettes(palettes))
+export const mapDispatchToProps = dispatch => ({
+  gatherPalettes: palettes => dispatch(gatherPalettes(palettes))
 })
 
 export default connect(null, mapDispatchToProps)(Palette)

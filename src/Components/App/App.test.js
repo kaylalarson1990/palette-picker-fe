@@ -1,6 +1,7 @@
 import React from 'react';
-import App from './App';
+import { App, mapDispatchToProps } from './App';
 import { shallow } from "enzyme";
+import { gatherPalettes } from '../../actions/index'
 import "../../../setupTests";
 
 describe("App", () => {
@@ -16,3 +17,13 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 })
+
+describe("mapDispatchToProps", () => {
+  it("calls dispatch with a gatherPalettes action", () => {
+    const mockDispatch = jest.fn();
+    const actionToDispatch = gatherPalettes("Test Palette");
+    const mappedDispatch = mapDispatchToProps(mockDispatch);
+    mappedDispatch.gatherPalettes("Test Palette");
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+});

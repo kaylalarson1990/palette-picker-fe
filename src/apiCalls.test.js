@@ -40,7 +40,9 @@ describe("fetchAllProjects", () => {
   });
 
   it("should be called with the correct params", () => {
-    const expected = ["undefined/api/v1/projects"];
+    const expected = [
+      "https://palette-picker-dk.herokuapp.com/api/v1/projects"
+    ];
 
     fetchAllProjects(mockData);
     expect(window.fetch).toHaveBeenCalledWith(...expected);
@@ -117,7 +119,9 @@ describe("fetchAllPalettes", () => {
   });
 
   it("should be called with the correct params", () => {
-    const expected = ["undefined/api/v1/palettes"];
+    const expected = [
+      "https://palette-picker-dk.herokuapp.com/api/v1/palettes"
+    ];
 
     fetchAllPalettes(mockPalettes);
     expect(window.fetch).toHaveBeenCalledWith(...expected);
@@ -173,7 +177,7 @@ describe("fetchAllPalettes", () => {
 
     it("should be called with the correct params", () => {
       const expected = [
-        "undefined/api/v1/projects",
+        "https://palette-picker-dk.herokuapp.com/api/v1/projects",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -257,7 +261,7 @@ describe("fetchAllPalettes", () => {
 
     it("should be called with the correct params", () => {
       const expected = [
-        "undefined/api/v1/palettes",
+        "https://palette-picker-dk.herokuapp.com/api/v1/palettes",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -318,7 +322,7 @@ describe("fetchAllPalettes", () => {
 
     it("should be called with the correct params", () => {
       const expected = [
-        "undefined/api/v1/projects",
+        "https://palette-picker-dk.herokuapp.com/api/v1/projects",
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -387,7 +391,7 @@ describe("fetchAllPalettes", () => {
 
     it("should be called with the correct params", () => {
       const expected = [
-        "undefined/api/v1/palettes",
+        "https://palette-picker-dk.herokuapp.com/api/v1/palettes",
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -428,7 +432,7 @@ describe("fetchAllPalettes", () => {
     });
     it("should call fetch with correct data", () => {
       const expected = [
-        "undefined/api/v1/projects/undefined",
+        "https://palette-picker-dk.herokuapp.com/api/v1/projects/undefined",
         {
           method: "DELETE",
           headers: {
@@ -437,7 +441,9 @@ describe("fetchAllPalettes", () => {
         }
       ];
 
-      deleteProject("undefined/api/v1/projects/undefined");
+      deleteProject(
+        "https://palette-picker-dk.herokuapp.com/api/v1/projects/undefined"
+      );
 
       expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
@@ -450,7 +456,9 @@ describe("fetchAllPalettes", () => {
       });
 
       expect(
-        deleteProject("undefined/api/v1/projects/undefined")
+        deleteProject(
+          "https://palette-picker-dk.herokuapp.com/api/v1/projects/undefined"
+        )
       ).rejects.toEqual(Error("Error deleting projects"));
     });
   });
@@ -465,7 +473,7 @@ describe("fetchAllPalettes", () => {
     });
     it("should call fetch with correct data", () => {
       const expected = [
-        "undefined/api/v1/palettes/undefined",
+        "https://palette-picker-dk.herokuapp.com/api/v1/palettes/undefined",
         {
           method: "DELETE",
           headers: {
@@ -474,7 +482,9 @@ describe("fetchAllPalettes", () => {
         }
       ];
 
-      deletePalette("undefined/api/v1/palettes/undefined");
+      deletePalette(
+        "https://palette-picker-dk.herokuapp.com/api/v1/palettes/undefined"
+      );
 
       expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
@@ -487,7 +497,9 @@ describe("fetchAllPalettes", () => {
       });
 
       expect(
-        deletePalette("undefined/api/v1/palettes/undefined")
+        deletePalette(
+          "https://palette-picker-dk.herokuapp.com/api/v1/palettes/undefined"
+        )
       ).rejects.toEqual(Error("Error deleting palettes"));
     });
   });
